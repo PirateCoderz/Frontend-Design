@@ -4,6 +4,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
 export default function DiscussAboutProject() {
+
+  const goalsArray = [
+    "Digital Transformation / BPO",
+    "Modernise Legacy Systems & Technology",
+    "Develop Robust Apps & Products",
+    "Unlock Value With Data & Analytics",
+    "Scale or Build In-house Tech Teams",
+    "Create Stunning Digital Experience"
+  ];
   return (
     <div className="overflow-hidden bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -17,54 +26,19 @@ export default function DiscussAboutProject() {
                 What your immediate business goals?
               </p>
               <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
-                <div className="relative pl-9">
-                  <dt className="inline font-semibold text-gray-900">
-                    <div className="absolute left-1 top-1 h-5 w-5 text-green-500">
-                      <FontAwesomeIcon icon={faCheckCircle} />
-                    </div>
-                    Digital Transformation / BPO
-                  </dt>
-                </div>
-                <div className="relative pl-9">
-                  <dt className="inline font-semibold text-gray-900">
-                    <div className="absolute left-1 top-1 h-5 w-5 text-green-500">
-                      <FontAwesomeIcon icon={faCheckCircle} />
-                    </div>
-                    Modernise Legacy Systems & Technology
-                  </dt>
-                </div>
-                <div className="relative pl-9">
-                  <dt className="inline font-semibold text-gray-900">
-                    <div className="absolute left-1 top-1 h-5 w-5 text-green-500">
-                      <FontAwesomeIcon icon={faCheckCircle} />
-                    </div>
-                    Develop Robust Apps & Products
-                  </dt>
-                </div>
-                <div className="relative pl-9">
-                  <dt className="inline font-semibold text-gray-900">
-                    <div className="absolute left-1 top-1 h-5 w-5 text-green-500">
-                      <FontAwesomeIcon icon={faCheckCircle} />
-                    </div>
-                    Unlock Value With Data & Analytics
-                  </dt>
-                </div>
-                <div className="relative pl-9">
-                  <dt className="inline font-semibold text-gray-900">
-                    <div className="absolute left-1 top-1 h-5 w-5 text-green-500">
-                      <FontAwesomeIcon icon={faCheckCircle} />
-                    </div>
-                    Scale or Build In-house Tech Teams
-                  </dt>
-                </div>
-                <div className="relative pl-9">
-                  <dt className="inline font-semibold text-gray-900">
-                    <div className="absolute left-1 top-1 h-5 w-5 text-green-500">
-                      <FontAwesomeIcon icon={faCheckCircle} />
-                    </div>
-                    Create Stunning Digital Experience
-                  </dt>
-                </div>
+
+                {goalsArray.map((n) => (
+                  <div key={n} className="relative pl-9">
+                    <dt className="inline font-semibold text-gray-900">
+                      <div className="absolute left-1 top-1 h-5 w-5 text-green-500">
+                        <FontAwesomeIcon icon={faCheckCircle} />
+                      </div>
+                      {n}
+                    </dt>
+                  </div>
+                )
+                )}
+
               </dl>
             </div>
           </div>
